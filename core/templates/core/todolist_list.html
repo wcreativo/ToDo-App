@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+<h1>Task</h1>
+
+{% for Task in Tasks %}
+    <h2>{{Task.title}}</h2>
+{% endfor %}
+
+<h1>ToDoLists</h1>
+
+{% for ToDoList in ToDoLists %}
+    <h2>{{ToDoList.title}}</h2>
+{% endfor %}
+
+{% endblock content %}

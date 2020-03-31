@@ -1,17 +1,34 @@
 {% extends "core/base.html" %}
+{% load static %}
 
-{% block content %}
 
-<h1>Task</h1>
+{% comment %} taskBlock {% endcomment %}
+
+{% block task %}
+
+<h2>Task</h2>
 
 {% for Task in Tasks %}
-    <h2>{{Task.title}}</h2>
+<ul class="list-group">
+    <li class="list-group-item">{{Task.title}}</li>
+</ul>
 {% endfor %}
 
-<h1>ToDoLists</h1>
+{% endblock task %}
+
+{% comment %} listBlock {% endcomment %}
+
+{% block toDoList %}
+
+<h2>ToDoLists</h2>
 
 {% for ToDoList in ToDoLists %}
-    <h2>{{ToDoList.title}}</h2>
+<ul class="list-group">
+    <a href="#">
+        <li class="list-group-item" id="ListTitle" value="{{ToDoList.title}}">{{ToDoList.title}}</li>
+    </a>
+</ul>
 {% endfor %}
 
-{% endblock content %}
+{% endblock toDoList %}
+

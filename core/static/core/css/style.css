@@ -1,0 +1,8 @@
+aside{
+    width: 300px;
+}
+
+.container_all{
+    display: flex;
+    padding: 50px;
+}
